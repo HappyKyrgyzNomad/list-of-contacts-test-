@@ -92,7 +92,7 @@ export default function Card() {
                 key={data.index}
                 type="number"
                 id="number"
-                defaultValue={quantities[index]}
+                value={quantities[index]}
               />
               <div
                 key={index}
