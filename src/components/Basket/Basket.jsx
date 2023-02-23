@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Basket.scss";
 
 export default function Basket({ products }) {
@@ -14,7 +13,7 @@ export default function Basket({ products }) {
       <button>Подтвердите заказ</button>
       <p>
         Подтверждая заказ , я принимаю условия{" "}
-        <a href="#">пользовательского соглашения</a>
+        <a href="www.instagram.com">пользовательского соглашения</a>
       </p>
     </div>
   );

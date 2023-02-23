@@ -1,8 +1,5 @@
 import "./Header.scss";
 
-import call from "../../media/call.svg";
-import mail from "../../media/mail.svg";
-
 export default function Header() {
   return (
     <div className="header">
@@ -19,12 +16,10 @@ export default function Header() {
         {" "}
         <div>
           {" "}
-          {/* <img src={mail}></img> */}
           <a className="header__text" href="mailto: info@Kanzler.kg">
             info@Kanzler.kg
           </a>
         </div>
-        <img href={call}></img>
         <a href="tel:+996221138602" className="header__text header__text--red">
           Позвонить
         </a>
