@@ -44,7 +44,10 @@ export default function Order() {
         type="radio"
         placeholder="Физическое лицо"
       ></input>
-      <label>Самовывоз</label> <a href="">режим работы магазина </a>
+      <label>Самовывоз</label>{" "}
+      <a href="https://www.google.com/maps/place/KEKEEV+BBQ/@42.8540921,74.6283312,15z/data=!4m6!3m5!1s0x389eb76877b6eee7:0xbee3f06148595c4d!8m2!3d42.8565745!4d74.6292612!16s%2Fg%2F11r4gzgj40">
+        режим работы магазина{" "}
+      </a>
       <br></br>
       <input
         className="order__check"
@@ -52,7 +55,9 @@ export default function Order() {
         placeholder="Физическое лицо"
       ></input>
       <label>Курьером</label>
-      <a href="">Условия доставки</a>
+      <a href="https://www.google.com/maps/place/KEKEEV+BBQ/@42.8540921,74.6283312,15z/data=!4m6!3m5!1s0x389eb76877b6eee7:0xbee3f06148595c4d!8m2!3d42.8565745!4d74.6292612!16s%2Fg%2F11r4gzgj40">
+        Условия доставки
+      </a>
       <p>Адрес доставки</p>{" "}
       <input className="order__fill" placeholder="   Страна"></input>{" "}
       <input className="order__fill" placeholder="   Город"></input>{" "}

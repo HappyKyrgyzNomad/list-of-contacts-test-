@@ -13,6 +13,7 @@ export default function Card() {
       artitcle: "lorem",
       quantity: 0,
       price: 420,
+      id: 1,
     },
     {
       img: pens,
@@ -20,6 +21,7 @@ export default function Card() {
       artitcle: "lorem",
       quantity: 0,
       price: 420,
+      id: 2,
     },
     {
       img: pens1,
@@ -27,6 +29,7 @@ export default function Card() {
       artitcle: "lorem",
       quantity: 0,
       price: 10000,
+      id: 3,
     },
   ];
   const [quantities, setQuantities] = useState(
@@ -69,27 +72,34 @@ export default function Card() {
           <li>Цена</li>
         </ul>{" "}
         {productss.map((data, index) => (
-          <div className="card__products">
-            <img src={data.img}></img>
+          <div className="card__products" key={data.id}>
+            <img key={data.index} src={data.img} alt="dasd"></img>
             <p className="card__name">{data.name}</p>
             <p className="card__article">{data.artitcle}</p>
             <form className="card__quantity">
               <div
-                class="value-button"
+                className="value-button"
                 id="decrease"
                 onClick={() => decrease(index)}
                 value={quantities[index]}
+                onChange={console.log("e")}
                 // onClick={() => decrease()}
                 // value={quantities}
               >
                 -
               </div>
-              <input type="number" id="number" value={quantities[index]} />
+              <input
+                key={data.index}
+                type="number"
+                id="number"
+                defaultValue={quantities[index]}
+              />
               <div
-                class="value-button"
+                key={index}
+                className="value-button"
                 id="increase"
                 onClick={() => increase(index)}
-                value="Increase Value"
+                defaultValue="Increase Value"
               >
                 +
               </div>
