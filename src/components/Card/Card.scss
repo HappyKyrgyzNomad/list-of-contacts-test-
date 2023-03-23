@@ -1,91 +1,87 @@
 .card {
-  width: 840px;
+  box-sizing: border-box;
 
-  ul {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
-    li {
-      list-style-type: none;
-      margin: 20px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 8px;
+
+  width: 360px;
+  height: 1319px;
+
+  /* Material 3/surfaces/dark/surface1
+
+Surface 1
+*/
+  background: #1a1c1c;
+  /* Material 3/state-layers/dark/secondary/opacity-0.16 */
+
+  border: 1px solid rgba(187, 201, 202, 0.16);
+  border-radius: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+  h1 {
+    color: #e2e2e2;
   }
-  &__products {
-    position: relative;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
-
-    padding: 20px;
-  }
-  form {
-    width: 207px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .value-button {
-    display: inline-block;
-    border: 1px solid #ddd;
-    margin: 0px;
-    width: 32px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 11px 0;
-    background: #eee;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  .value-button:hover {
-    cursor: pointer;
-  }
-
-  form #decrease {
-    margin-right: -4px;
-    border-radius: 8px 0 0 8px;
-  }
-
-  form #increase {
-    margin-left: -4px;
-    border-radius: 0 8px 8px 0;
-  }
-
-  form #input-wrap {
-    margin: 0px;
+  input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0px;
-  }
-
-  input#number {
-    text-align: center;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+    background: #1e1e1e;
+    color: #e2e2e2;
+    width: 350px;
+    height: 56px;
     border: none;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    margin: 0px;
-    width: 32px;
-    height: 40px;
+    outline: none;
+  }
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.87);
   }
 
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  button {
+    border: none;
+    background: none;
   }
   &__name {
-    width: 367px;
-    padding-left: 70px;
+    margin-bottom: -20px;
+    transition: box-shadow 0.3s;
+    border: none;
   }
-}
-.remove {
-  position: absolute;
-  background: none;
-  color: #ea5a5a;
-  border: none;
-  top: 35px;
-  right: 2px;
+  &__name:hover {
+    box-shadow: 0 0 11px rgba(255, 255, 255, 0.2);
+    color: rgb(0, 162, 255);
+  }
+  &__number {
+    color: #8b8b8b;
+    font-size: medium;
+  }
+  &__more {
+    display: none;
+  }
+  .btn {
+    background: red;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+  }
+  .--done {
+    background: green;
+  }
+  .--edit {
+    background: orange;
+  }
+  p {
+    color: rgba(255, 255, 255, 0.87);
+  }
 }

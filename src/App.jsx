@@ -1,16 +1,15 @@
 import "./App.scss";
-import Header from "./components/Header/Header";
-import Order from "./components/Order/Order";
+
 import SearchBar from "./components/SearchBar/SearchBar";
 import Footer from "./components/Footer/Footer";
+import Card from "./components/Card/Card";
 
 function App() {
   return (
     <div>
       <div className="App">
-        <Header />
         <SearchBar />
-        <Order />
+        <Card />
       </div>
       <Footer />
     </div>
