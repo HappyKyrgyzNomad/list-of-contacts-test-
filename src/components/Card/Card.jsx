@@ -21,10 +21,10 @@ export default function Card() {
     setData(newDataArray);
   };
 
-  const handleEdit = (itemId, newTitle) => {
+  const handleEdit = (itemId, newName, newPhone) => {
     const updatedItems = data.map((item) => {
       if (item.id === itemId) {
-        return { ...item, title: newTitle };
+        return { ...item, name: newName };
       } else {
         return item;
       }
@@ -71,14 +71,14 @@ export default function Card() {
       <input
         onChange={(e) => setSearch(e.target.value.toLowerCase())}
         type="text"
-        placeholder="поиск "
+        placeholder="поиск... "
       />
-      {sortedData
+      {data
         .filter((item) =>
           item.name.toLowerCase().includes(search.toLowerCase())
         )
         .map((item, index) => (
-          <div key={item.id}>
+          <div key={item.index} item={item}>
             <button>
               <h1 onClick={() => toggle(index)} className="card__name">
                 {item.name} <p className="card__number">{item.phone} </p>
@@ -105,7 +105,7 @@ export default function Card() {
                   className="btn --canc"
                   onClick={() => setEditedIndex(null)}
                 >
-                  Cancel
+                  отменить
                 </button>
                 <button
                   className="btn --done"
