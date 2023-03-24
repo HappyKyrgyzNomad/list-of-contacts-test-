@@ -51,9 +51,6 @@ export default function Card() {
     }
   }, []);
 
-  //сортировка по алфавиту
-  const sortedData = [...data].sort((a, b) => a.name.localeCompare(b.name));
-
   //удалить контакт
   const remover = (id) => {
     const updatedData = data.filter((item) => item.id !== id);
